@@ -8,7 +8,7 @@ export default function Home() {
   const [result, setResult] = useState("");
 
   const handleSubmit = async () => {
-    const res = await fetch("/api/analyze", {
+    const res = await fetch("/api/openai", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ resumeText: resume, jobDescription: job }),
